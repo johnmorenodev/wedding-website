@@ -1810,13 +1810,35 @@ a {
     border-radius: 999px;
   }
 
+  .hero-bg-img {
+    object-position: center 25%;
+    transform: scale(1.08) translate(35px, 0px);
+  }
+
   .hero-inner {
-    padding-top: 3rem;
-    padding-bottom: 3.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .hero h1 {
-    font-size: clamp(4.4rem, 16vw, 6.8rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(3.2rem, 13vw, 4.6rem);
+    line-height: 0.88;
+    margin: 0.2rem 0;
+  }
+
+  .hero-name {
+    display: block;
+  }
+
+  .hero-amp {
+    display: block;
+    font-size: 0.65em;
+    line-height: 1;
+    margin: 0.15rem 0;
   }
 
   .hero-date {
