@@ -12,5 +12,5 @@ const isLocal =
 window.WEDDING_CONFIG = {
   API_BASE_URL: isLocal
     ? "http://localhost:3000/api/public"
-    : "https://johnandjessawedding.site/api/public",
+    : "https://johnjessawedding.site/api/public",
 };
