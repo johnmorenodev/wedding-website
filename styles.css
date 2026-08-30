@@ -1867,32 +1867,58 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 2rem;
-  background: var(--bg-cream);
+  padding: 1rem 2rem;
+  background: rgba(250, 247, 242, 0.94);
   border-bottom: 1px solid var(--rule);
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 }
 
+.nav-back-link,
 .back-link {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--ink);
+  color: var(--soft-ink);
   text-decoration: none;
   font-family: "Cinzel", serif;
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
+.nav-back-link:hover,
 .back-link:hover {
-  color: var(--gold);
+  color: var(--gold-dark);
   transform: translateX(-3px);
+}
+
+.nav-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.4rem;
+  background: linear-gradient(135deg, #e5cfab 0%, #dfc37a 50%, #b8974d 100%);
+  color: #1c140b;
+  font-family: "Cinzel", serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(154, 122, 67, 0.22);
+  transition: all 0.25s ease;
+}
+
+.nav-pill-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(154, 122, 67, 0.35);
+  color: #12261e;
 }
 
 .prenup-hero {
@@ -2241,6 +2267,30 @@ a {
   align-items: center;
   justify-content: center;
   margin: 0 auto 1rem;
+}
+
+.choose-files-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  background: linear-gradient(135deg, #e5cfab 0%, #dfc37a 50%, #b8974d 100%);
+  color: #1c140b;
+  font-family: "Cinzel", serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(154, 122, 67, 0.22);
+  margin-top: 0.5rem;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.uploader-dropzone-elegant:hover .choose-files-badge {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(154, 122, 67, 0.35);
 }
 
 .uploader-file-item {

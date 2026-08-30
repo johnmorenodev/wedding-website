@@ -252,6 +252,9 @@ if (btnStartUpload) {
       uploadSuccessBanner.style.display = "block";
       uploadSuccessBanner.scrollIntoView({ behavior: "smooth" });
     }
+
+    // Refresh live uploaded photo manager
+    fetchUploadedPhotos();
   });
 }
 
@@ -400,6 +403,93 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
+// Uploaded Photos Management Elements
+const uploadedManagerSection = document.getElementById("uploadedManagerSection");
+const livePhotoCount = document.getElementById("livePhotoCount");
+const uploadedPhotosGrid = document.getElementById("uploadedPhotosGrid");
+const btnRefreshPhotos = document.getElementById("btnRefreshPhotos");
+
+let uploadedPhotos = [];
+
+async function fetchUploadedPhotos() {
+  if (!uploadedPhotosGrid) return;
+  try {
+    const res = await fetch(`${API_BASE_URL}/photos?category=prenup&_t=${Date.now()}`);
+    if (!res.ok) return;
+    const data = await res.json();
+    uploadedPhotos = data.photos || [];
+    renderUploadedManager();
+  } catch (err) {
+    console.warn("Could not load uploaded photos:", err);
+  }
+}
+
+function renderUploadedManager() {
+  if (!uploadedManagerSection || !uploadedPhotosGrid) return;
+
+  if (uploadedPhotos.length === 0) {
+    uploadedManagerSection.style.display = "none";
+    return;
+  }
+
+  uploadedManagerSection.style.display = "block";
+  if (livePhotoCount) livePhotoCount.textContent = uploadedPhotos.length;
+
+  uploadedPhotosGrid.innerHTML = uploadedPhotos
+    .map(
+      (p) => `
+    <div style="position: relative; border-radius: 10px; overflow: hidden; border: 1px solid rgba(223,195,122,0.4); background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+      <div style="aspect-ratio: 1; width: 100%; overflow: hidden; background: #faf7f2;">
+        <img src="${p.url}" alt="${escapeHtml(p.caption || '')}" style="width: 100%; height: 100%; object-fit: cover;" />
+      </div>
+      <div style="padding: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.72rem; color: var(--soft-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 60px;">
+          #${p.id}
+        </span>
+        <button
+          type="button"
+          onclick="handleDeletePhoto(${p.id})"
+          style="background: rgba(211,47,47,0.1); border: 1px solid rgba(211,47,47,0.3); color: #c62828; border-radius: 6px; padding: 0.2rem 0.45rem; font-size: 0.72rem; font-weight: 700; cursor: pointer;"
+        >
+          🗑️ Delete
+        </button>
+      </div>
+    </div>
+  `
+    )
+    .join("");
+}
+
+window.handleDeletePhoto = async function (photoId) {
+  if (!confirm("Are you sure you want to permanently delete this photo from the gallery and S3?")) return;
+
+  try {
+    const res = await fetch(`${API_BASE_URL}/photos`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        token: currentToken,
+        photoId: photoId,
+      }),
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      alert(err.error || "Failed to delete photo.");
+      return;
+    }
+
+    uploadedPhotos = uploadedPhotos.filter((p) => p.id !== photoId);
+    renderUploadedManager();
+  } catch (err) {
+    alert("Network error while deleting photo.");
+  }
+};
+
+if (btnRefreshPhotos) {
+  btnRefreshPhotos.addEventListener("click", () => fetchUploadedPhotos());
+}
+
 // Start immediately
 initToken();
-discoverApiUrl();
+discoverApiUrl().then(() => fetchUploadedPhotos());

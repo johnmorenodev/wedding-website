@@ -16,12 +16,12 @@
   <body class="page-upload">
     <!-- Topbar Navigation -->
     <header class="prenup-nav">
-      <a href="index.html" class="back-link">
+      <a href="index.html" class="nav-back-link">
         &larr; Back to Wedding Details
       </a>
       <a class="brand" href="index.html">J<span class="script-amp">&amp;</span>J 10.24.26</a>
       <div class="topbar-actions">
-        <a class="hero-rsvp-button" href="prenup.html" style="min-height: 2.6rem; min-width: 6rem; font-size: 0.85rem;">View Gallery &rarr;</a>
+        <a class="nav-pill-btn" href="prenup.html">View Gallery ✨</a>
       </div>
     </header>
 
@@ -57,8 +57,8 @@
             <button
               type="button"
               id="btnSubmitToken"
-              class="button button-gold-pill"
-              style="width: 100%; justify-content: center;"
+              class="nav-pill-btn"
+              style="width: 100%; border: none; cursor: pointer; padding: 0.85rem; font-size: 0.85rem;"
             >
               Unlock Uploader &rarr;
             </button>
@@ -98,12 +98,10 @@
             <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.85rem; color: var(--ink); margin: 0.4rem 0 0.3rem;">
               Drag &amp; drop photos here
             </h3>
-            <p style="color: var(--soft-ink); font-size: 0.92rem; margin: 0 0 1.25rem;">
+            <p style="color: var(--soft-ink); font-size: 0.92rem; margin: 0 0 1rem;">
               Supports high-resolution JPG, PNG, and WebP images.
             </p>
-            <button type="button" class="button button-gold-pill" style="pointer-events: none;">
-              Browse Files from Computer &rarr;
-            </button>
+            <span class="choose-files-badge">Choose Photos from Computer &rarr;</span>
             <input type="file" id="fileInput" class="uploader-file-input" multiple accept="image/jpeg,image/png,image/webp,image/avif" />
           </div>
 
@@ -126,7 +124,7 @@
               <!-- Dynamically populated files -->
             </div>
 
-            <button type="button" class="button rsvp-submit-btn" id="btnStartUpload" style="width: 100%; margin-top: 1.5rem; justify-content: center; font-size: 1.05rem; padding: 1.1rem;">
+            <button type="button" class="nav-pill-btn" id="btnStartUpload" style="width: 100%; margin-top: 1.5rem; justify-content: center; font-size: 0.95rem; padding: 1rem; border: none; cursor: pointer;">
               Upload Photos to Gallery ✨
             </button>
           </div>
@@ -142,19 +140,42 @@
             </p>
             <a
               href="prenup.html"
-              class="button button-gold-pill"
+              class="nav-pill-btn"
               style="display: inline-flex;"
             >
               View Live Prenup Gallery &rarr;
             </a>
           </div>
         </div>
+
+        <!-- Uploaded Photos Management Section -->
+        <div id="uploadedManagerSection" class="uploader-gold-card" style="margin-top: 2.5rem; display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(223, 195, 122, 0.3); padding-bottom: 0.75rem;">
+            <div>
+              <p class="eyebrow" style="margin: 0; font-size: 0.75rem;"><span class="script-accent">gallery management</span> &bull; Live Photos</p>
+              <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--ink); margin: 0.2rem 0 0;">
+                Currently Uploaded Photos (<span id="livePhotoCount">0</span>)
+              </h3>
+            </div>
+            <button type="button" id="btnRefreshPhotos" style="background: rgba(0,0,0,0.03); border: 1px solid rgba(223, 195, 122, 0.4); padding: 0.4rem 0.9rem; border-radius: 999px; font-size: 0.78rem; font-family: 'Cinzel', serif; cursor: pointer; color: var(--soft-ink); letter-spacing: 0.05em;">
+              ↻ Refresh
+            </button>
+          </div>
+
+          <div id="uploadedPhotosGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 1.1rem;">
+            <!-- Live photos with delete button -->
+          </div>
+        </div>
       </div>
     </main>
 
-    <footer class="footer" style="margin-top: 4rem;">
-      <p class="footer-copy">&copy; 2026 John &amp; Jessa. Handcrafted with love.</p>
-    </footer>
+    <!-- Romantic Closing Signoff -->
+    <section class="section section-closing" style="padding-top: 2rem; padding-bottom: 4rem;">
+      <div class="closing-content">
+        <p class="closing-script script-accent">See you in Dumaguete!</p>
+        <p class="closing-signoff">With all our love,<br /><strong class="closing-couple script-accent">John &amp; Jessa</strong></p>
+      </div>
+    </section>
 
     <script src="config.js"></script>
     <script src="upload.js"></script>
