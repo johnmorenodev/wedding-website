@@ -70,9 +70,10 @@ function renderGallery() {
     if (photoCountPill) photoCountPill.style.display = "none";
     prenupGrid.innerHTML = `
       <div class="gallery-empty">
-        <span class="empty-icon">📷</span>
+        <div class="empty-icon-badge">📷</div>
+        <p class="eyebrow" style="margin-bottom: 0.25rem;"><span class="script-accent">coming soon</span> &bull; Our Story</p>
         <h3>Our Gallery is Coming Soon</h3>
-        <p style="color: var(--soft-ink); font-size: 0.95rem; line-height: 1.6;">
+        <p>
           Our photographer is putting the finishing touches on our prenup album. Check back soon to see our favorite moments!
         </p>
       </div>
