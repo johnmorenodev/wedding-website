@@ -1,5 +1,9 @@
 {
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/upload", "destination": "/upload.html" },
+    { "source": "/prenup", "destination": "/prenup.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
