@@ -34,6 +34,11 @@ const uploadSuccessBanner = document.getElementById("uploadSuccessBanner");
  * Multi-port Auto Discovery for API
  */
 async function discoverApiUrl() {
+  if (window.WEDDING_CONFIG?.API_BASE_URL) {
+    API_BASE_URL = window.WEDDING_CONFIG.API_BASE_URL;
+    return;
+  }
+
   for (const url of DEFAULT_API_URLS) {
     try {
       const res = await fetch(`${url}/photos?category=prenup`);
@@ -395,5 +400,6 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
-// Start
-discoverApiUrl().then(() => initToken());
+// Start immediately
+initToken();
+discoverApiUrl();
