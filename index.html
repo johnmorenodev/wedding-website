@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John & Jessa — 10.24.26</title>
+    <meta
+      name="description"
+      content="A one-page wedding website for John and Jessa with wedding details, venue directions, and RSVP."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="alternate icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="confettiCanvas" class="confetti-canvas" aria-hidden="true"></canvas>
+
+    <a class="sticky-rsvp-cta" href="#rsvp">RSVP by October 10</a>
+
+    <header class="hero" id="top">
+      <nav class="topbar">
+        <div class="topbar-links">
+          <a href="#essentials">Details</a>
+          <a href="prenup.html">Prenup</a>
+          <a href="#faq">FAQ</a>
+          <!-- <a href="#wishes">Wishes</a> -->
+        </div>
+        <a class="brand" href="#top">J<span class="script-amp">&amp;</span>J 10.24.26</a>
+        <div class="topbar-actions">
+          <a class="hero-rsvp-button" href="#rsvp">RSVP</a>
+        </div>
+      </nav>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="hero-tagline script-accent">we're getting married</p>
+          <h1>John <span class="hero-amp">&amp;</span> Jessa</h1>
+          <p class="hero-date">10 . 24 . 26</p>
+
+          <div class="countdown-card" aria-live="polite">
+            <div class="countdown-grid" id="countdown">
+              <div class="countdown-unit">
+                <strong id="days">00</strong>
+                <span>Days</span>
+              </div>
+              <div class="countdown-unit">
+                <strong id="hours">00</strong>
+                <span>Hours</span>
+              </div>
+              <div class="countdown-unit">
+                <strong id="minutes">00</strong>
+                <span>Minutes</span>
+              </div>
+              <div class="countdown-unit">
+                <strong id="seconds">00</strong>
+                <span>Seconds</span>
+              </div>
+            </div>
+          </div>
+
+          <a class="hero-scroll-cue" href="#essentials">
+            <span>Scroll to explore</span>
+            <span class="scroll-arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-bottom-transition" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none">
+          <path d="M0,0 C480,55 960,55 1440,0 L1440,60 L0,60 Z" fill="#fffdf8"></path>
+        </svg>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section-essentials reveal" id="essentials">
+        <div class="section-heading">
+          <p class="eyebrow"><span class="script-accent">our big day</span> &bull; The Details</p>
+          <h2>When &amp; Where</h2>
+        </div>
+
+        <div class="venue-stack">
+          <article class="venue-block venue-block-ceremony">
+            <div class="venue-photo-wrapper">
+              <div class="venue-frame-contour" aria-hidden="true"></div>
+              
+              <!-- Botanical Corner Accents -->
+              <div class="photo-floral-corner photo-floral-top-left" aria-hidden="true">
+                <svg width="90" height="90" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 85 Q30 45 85 12" stroke="#8a9780" stroke-width="2" stroke-linecap="round" />
+                  <path d="M42 38 C30 26 18 28 14 38 C10 44 22 52 36 44 Z" fill="#b1bda8" opacity="0.9" />
+                  <path d="M58 24 C46 12 34 14 30 22 C26 28 38 36 52 30 Z" fill="#9da993" opacity="0.9" />
+                  <path d="M76 14 C66 4 54 6 50 14 C46 20 56 28 70 21 Z" fill="#b8c3af" opacity="0.9" />
+                  <circle cx="26" cy="45" r="3.2" fill="#dfc37a" />
+                  <circle cx="45" cy="20" r="2.8" fill="#a4b09b" />
+                  <circle cx="66" cy="10" r="3.2" fill="#dfc37a" />
+                  <g transform="translate(10, 42) scale(0.75)">
+                    <circle cx="20" cy="20" r="18" fill="#faf6ee" stroke="#e8decb" stroke-width="1.2" />
+                    <path d="M8 14 C6 6 22 4 28 12 C32 18 24 26 14 24 Z" fill="#f4ebd9" opacity="0.9" />
+                    <path d="M12 18 C14 12 24 10 26 16 C24 20 16 22 12 18 Z" fill="#eedfc5" opacity="0.85" />
+                    <circle cx="20" cy="18" r="2" fill="#dfcbab" />
+                  </g>
+                </svg>
+              </div>
+
+              <div class="photo-floral-corner photo-floral-bottom-right" aria-hidden="true">
+                <svg width="90" height="90" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M92 15 Q70 55 15 88" stroke="#8a9780" stroke-width="2" stroke-linecap="round" />
+                  <path d="M58 62 C70 74 82 72 86 62 C90 56 78 48 64 56 Z" fill="#b1bda8" opacity="0.9" />
+                  <path d="M42 76 C54 88 66 86 70 78 C74 72 62 64 48 70 Z" fill="#9da993" opacity="0.9" />
+                  <path d="M24 86 C34 96 46 94 50 86 C54 80 44 72 30 79 Z" fill="#b8c3af" opacity="0.9" />
+                  <circle cx="74" cy="55" r="3.2" fill="#dfc37a" />
+                  <circle cx="55" cy="80" r="2.8" fill="#a4b09b" />
+                  <circle cx="34" cy="90" r="3.2" fill="#dfc37a" />
+                  <g transform="translate(50, 16) scale(0.75)">
+                    <circle cx="20" cy="20" r="18" fill="#faf6ee" stroke="#e8decb" stroke-width="1.2" />
+                    <path d="M8 14 C6 6 22 4 28 12 C32 18 24 26 14 24 Z" fill="#f4ebd9" opacity="0.9" />
+                    <path d="M12 18 C14 12 24 10 26 16 C24 20 16 22 12 18 Z" fill="#eedfc5" opacity="0.85" />
+                    <circle cx="20" cy="18" r="2" fill="#dfcbab" />
+                  </g>
+                </svg>
+              </div>
+
+              <div class="venue-photo-inner">
+                <img
+                  src="https://live.staticflickr.com/7353/8913603064_c178069305_b.jpg"
+                  alt="Our Mother of Perpetual Help Parish in Dumaguete"
+                />
+              </div>
+            </div>
+
+            <div class="venue-copy">
+              <p class="venue-tagline script-accent">where we say "I do"</p>
+              <h3>The Ceremony</h3>
+              <p class="venue-date">Saturday, October 24, 2026</p>
+              <p class="venue-time">2:00 PM</p>
+              
+              <div class="venue-name-badge">
+                <span class="venue-badge-eyebrow">Ceremony Venue</span>
+                <h4 class="venue-primary-name">Our Mother of Perpetual Help Parish</h4>
+                <p class="venue-secondary-name">Redemptorist Church</p>
+                <p class="venue-street-address">San Lorenzo Ruiz St., Taclobo, Dumaguete City</p>
+              </div>
+
+              <div class="venue-links">
+                <a
+                  href="https://maps.google.com/?q=Our+Mother+of+Perpetual+Help+Parish+Redemptorist+Church+Dumaguete"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="venue-link-btn"
+                  >View Church Map &rarr;</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="venue-block venue-block-reception">
+            <div class="venue-copy">
+              <p class="venue-tagline script-accent">dinner, drinks &amp; dancing</p>
+              <h3>The Reception</h3>
+              <p class="venue-date">Saturday, October 24, 2026</p>
+              <p class="venue-time">4:00 PM onwards</p>
+
+              <div class="venue-name-badge">
+                <span class="venue-badge-eyebrow">Reception Venue</span>
+                <h4 class="venue-primary-name">Hotel Essencia</h4>
+                <p class="venue-secondary-name">2nd Floor Function Hall</p>
+                <p class="venue-street-address">39 Real St. corner San Juan St., Dumaguete City</p>
+              </div>
+
+              <div class="venue-links">
+                <a
+                  href="https://maps.google.com/?q=Hotel+Essencia+Dumaguete"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="venue-link-btn"
+                  >View Reception Map &rarr;</a
+                >
+              </div>
+            </div>
+
+            <div class="venue-photo-wrapper">
+              <div class="venue-frame-contour" aria-hidden="true"></div>
+              
+              <!-- Botanical Corner Accents -->
+              <div class="photo-floral-corner photo-floral-top-right" aria-hidden="true">
+                <svg width="90" height="90" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 12 Q65 45 92 85" stroke="#8a9780" stroke-width="2" stroke-linecap="round" />
+                  <path d="M58 38 C70 26 82 28 86 38 C90 44 78 52 64 44 Z" fill="#b1bda8" opacity="0.9" />
+                  <path d="M42 24 C54 12 66 14 70 22 C74 28 62 36 48 30 Z" fill="#9da993" opacity="0.9" />
+                  <path d="M24 14 C34 4 46 6 50 14 C54 20 44 28 30 21 Z" fill="#b8c3af" opacity="0.9" />
+                  <circle cx="74" cy="45" r="3.2" fill="#dfc37a" />
+                  <circle cx="55" cy="20" r="2.8" fill="#a4b09b" />
+                  <circle cx="34" cy="10" r="3.2" fill="#dfc37a" />
+                  <g transform="translate(50, 42) scale(0.75)">
+                    <circle cx="20" cy="20" r="18" fill="#faf6ee" stroke="#e8decb" stroke-width="1.2" />
+                    <path d="M8 14 C6 6 22 4 28 12 C32 18 24 26 14 24 Z" fill="#f4ebd9" opacity="0.9" />
+                    <path d="M12 18 C14 12 24 10 26 16 C24 20 16 22 12 18 Z" fill="#eedfc5" opacity="0.85" />
+                    <circle cx="20" cy="18" r="2" fill="#dfcbab" />
+                  </g>
+                </svg>
+              </div>
+
+              <div class="photo-floral-corner photo-floral-bottom-left" aria-hidden="true">
+                <svg width="90" height="90" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 15 Q30 55 85 88" stroke="#8a9780" stroke-width="2" stroke-linecap="round" />
+                  <path d="M42 62 C30 74 18 72 14 62 C10 56 22 48 36 56 Z" fill="#b1bda8" opacity="0.9" />
+                  <path d="M58 76 C46 88 34 86 30 78 C26 72 38 64 52 70 Z" fill="#9da993" opacity="0.9" />
+                  <path d="M76 86 C66 96 54 94 50 86 C46 80 56 72 70 79 Z" fill="#b8c3af" opacity="0.9" />
+                  <circle cx="26" cy="55" r="3.2" fill="#dfc37a" />
+                  <circle cx="45" cy="80" r="2.8" fill="#a4b09b" />
+                  <circle cx="66" cy="90" r="3.2" fill="#dfc37a" />
+                  <g transform="translate(10, 16) scale(0.75)">
+                    <circle cx="20" cy="20" r="18" fill="#faf6ee" stroke="#e8decb" stroke-width="1.2" />
+                    <path d="M8 14 C6 6 22 4 28 12 C32 18 24 26 14 24 Z" fill="#f4ebd9" opacity="0.9" />
+                    <path d="M12 18 C14 12 24 10 26 16 C24 20 16 22 12 18 Z" fill="#eedfc5" opacity="0.85" />
+                    <circle cx="20" cy="18" r="2" fill="#dfcbab" />
+                  </g>
+                </svg>
+              </div>
+
+              <div class="venue-photo-inner">
+                <img
+                  src="./hotel-essencia.jpg"
+                  alt="Exterior of Hotel Essencia in Dumaguete"
+                />
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="dress-code-panel" id="dress-code">
+          <div class="dress-code-copy">
+            <p class="dress-code-label">Dress Code &bull; <span class="script-accent">garden chic</span></p>
+            <h3>Soft Beige Wedding Palette</h3>
+            <p class="dress-code-intro">
+              We’d love to see you dressed up in dreamy tones of beige, ivory, champagne, gold, and eucalyptus.
+            </p>
+            <div class="bride-white-callout">
+              <span class="ps-tag script-accent">P.S.</span>
+              <span class="ps-text">The bride already claimed white!</span>
+              <span class="sparkle-emoji" aria-hidden="true">✨</span>
+            </div>
+          </div>
+
+          <div class="dress-swatches" aria-label="Dress code color palette">
+            <div class="dress-swatch">
+              <span class="dress-color swatch-beige"></span>
+              <small>Beige</small>
+            </div>
+            <div class="dress-swatch">
+              <span class="dress-color swatch-ivory"></span>
+              <small>Ivory</small>
+            </div>
+            <div class="dress-swatch">
+              <span class="dress-color swatch-champagne"></span>
+              <small>Champagne</small>
+            </div>
+            <div class="dress-swatch">
+              <span class="dress-color swatch-gold"></span>
+              <small>Gold</small>
+            </div>
+            <div class="dress-swatch">
+              <span class="dress-color swatch-eucalyptus"></span>
+              <small>Eucalyptus</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-faq reveal" id="faq">
+        <div class="faq-layout">
+          <div class="faq-visual">
+            <div class="faq-arch-frame">
+              <div class="faq-arch-contour" aria-hidden="true"></div>
+              <div class="faq-arch">
+                <img
+                  src="./hotel-essencia.jpg"
+                  alt="Hotel Essencia wedding reception venue"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-content">
+            <div class="faq-header">
+              <div class="faq-cherub" aria-hidden="true">
+                <svg
+                  class="cherub-icon"
+                  width="56"
+                  height="46"
+                  viewBox="0 0 70 56"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M28 20 C22 10, 10 12, 6 22 C4 28, 12 30, 24 25"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M22 18 C16 8, 8 12, 10 20 C12 24, 18 24, 25 22"
+                    stroke="currentColor"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                    stroke-dasharray="1 1"
+                  />
+                  <path
+                    d="M30 18 C28 6, 42 4, 46 14 C48 20, 42 24, 34 22"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    cx="48"
+                    cy="18"
+                    r="6"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                  />
+                  <path
+                    d="M44 14 C43 11, 46 9, 49 9 C52 9, 54 11, 53 14"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                  />
+                  <circle cx="50" cy="17" r="0.75" fill="currentColor" />
+                  <path
+                    d="M43 23 C39 26, 35 28, 29 29 C24 30, 22 34, 20 38 C18 42, 22 45, 26 43 C31 41, 35 36, 39 31 C42 29, 44 26, 45 24"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M22 40 C18 42, 12 45, 10 49 C9 51, 12 52, 15 50 C18 48, 22 44, 25 43"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M20 42 C16 45, 14 49, 13 53 C15 54, 18 52, 20 48"
+                    stroke="currentColor"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M44 24 C48 25, 53 27, 57 26"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M40 25 C43 28, 48 30, 52 30"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M54 16 Q62 27 54 38"
+                    stroke="currentColor"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="54"
+                    y1="16"
+                    x2="48"
+                    y2="27"
+                    stroke="currentColor"
+                    stroke-width="0.8"
+                    stroke-dasharray="1 1"
+                  />
+                  <line
+                    x1="48"
+                    y1="27"
+                    x2="54"
+                    y2="38"
+                    stroke="currentColor"
+                    stroke-width="0.8"
+                    stroke-dasharray="1 1"
+                  />
+                  <line
+                    x1="42"
+                    y1="28"
+                    x2="63"
+                    y2="26"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M60 24 L64 26 L60 28"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+
+              <h2>Wedding details</h2>
+              <p class="faq-eyebrow"><span class="script-accent">everything you need to know</span> &bull; GOT QUESTIONS? WE'VE GOT ANSWERS!</p>
+            </div>
+
+            <p class="faq-intro">
+              Quick answers to help you plan your day with us!
+            </p>
+
+            <div class="faq-list">
+              <div class="faq-item is-open">
+                <button type="button" class="faq-summary" aria-expanded="true">
+                  <span>What's the dress code?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-collapse">
+                  <div class="faq-collapse-inner">
+                    <div class="faq-body">
+                      <p>
+                        Dress nice in our <a href="#dress-code">soft beige palette above</a>, but please don't outshine the bride! 😉
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button type="button" class="faq-summary" aria-expanded="false">
+                  <span>Can I bring a plus one?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-collapse">
+                  <div class="faq-collapse-inner">
+                    <div class="faq-body">
+                      <p>
+                        Just message either of us beforehand and we'll gladly make room for them!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button type="button" class="faq-summary" aria-expanded="false">
+                  <span>Will there be assigned seating?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-collapse">
+                  <div class="faq-collapse-inner">
+                    <div class="faq-body">
+                      <p>
+                        While there's no strict assigned seating, we'll be arranging tables so you're seated with familiar faces and people you're comfortable with!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button type="button" class="faq-summary" aria-expanded="false">
+                  <span>Are gifts expected?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-collapse">
+                  <div class="faq-collapse-inner">
+                    <div class="faq-body">
+                      <p>
+                        Not at all — having you celebrate with us is the best gift! (Though any honeymoon love is warmly appreciated.)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button type="button" class="faq-summary" aria-expanded="false">
+                  <span>Is transportation provided?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-collapse">
+                  <div class="faq-collapse-inner">
+                    <div class="faq-body">
+                      <p>
+                        Reach out to us directly and we'll do our best to help coordinate a ride for you!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-rsvp reveal" id="rsvp">
+        <div class="rsvp-header">
+          <div class="rsvp-floral-wrapper" aria-hidden="true">
+            <svg class="rsvp-floral" width="360" height="130" viewBox="0 0 380 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Left eucalyptus foliage -->
+              <path d="M190 70 C140 70 90 55 40 30" stroke="#8a9780" stroke-width="2" stroke-linecap="round"/>
+              <path d="M160 67 C145 52 130 50 120 58 C115 62 125 75 145 70 Z" fill="#b1bda8" opacity="0.85"/>
+              <path d="M130 60 C115 45 100 44 92 52 C87 56 96 68 116 63 Z" fill="#9da993" opacity="0.85"/>
+              <path d="M100 50 C85 36 72 37 65 44 C61 48 70 58 88 53 Z" fill="#b8c3af" opacity="0.85"/>
+              <path d="M70 40 C58 28 48 30 42 36 C38 40 46 48 60 43 Z" fill="#9da993" opacity="0.85"/>
+              
+              <!-- Right eucalyptus foliage -->
+              <path d="M190 70 C240 70 290 55 340 30" stroke="#8a9780" stroke-width="2" stroke-linecap="round"/>
+              <path d="M220 67 C235 52 250 50 260 58 C265 62 255 75 235 70 Z" fill="#b1bda8" opacity="0.85"/>
+              <path d="M250 60 C265 45 280 44 288 52 C293 56 284 68 264 63 Z" fill="#9da993" opacity="0.85"/>
+              <path d="M280 50 C295 36 308 37 315 44 C319 48 310 58 292 53 Z" fill="#b8c3af" opacity="0.85"/>
+              <path d="M310 40 C322 28 332 30 338 36 C342 40 334 48 320 43 Z" fill="#9da993" opacity="0.85"/>
+              
+              <!-- Accent sage berries -->
+              <circle cx="85" cy="38" r="3.5" fill="#a4b09b"/>
+              <circle cx="95" cy="32" r="3" fill="#8d9a84"/>
+              <circle cx="295" cy="38" r="3.5" fill="#a4b09b"/>
+              <circle cx="285" cy="32" r="3" fill="#8d9a84"/>
+
+              <!-- Left Rose (Soft Champagne/Cream) -->
+              <g transform="translate(135, 35)">
+                <ellipse cx="25" cy="30" rx="26" ry="24" fill="#faf6ee" stroke="#e8decb" stroke-width="1.2"/>
+                <path d="M10 25 C12 12 35 10 40 22 C38 32 20 38 10 25 Z" fill="#f4ebd9" opacity="0.9"/>
+                <path d="M16 28 C20 18 34 16 35 26 C33 32 22 35 16 28 Z" fill="#eedfc5" opacity="0.85"/>
+                <path d="M20 27 C22 22 30 20 30 26 C28 29 23 30 20 27 Z" fill="#dfcbab" opacity="0.8"/>
+              </g>
+
+              <!-- Right Rose (Soft Champagne/Ivory) -->
+              <g transform="translate(195, 35)">
+                <ellipse cx="25" cy="30" rx="26" ry="24" fill="#fbf8f2" stroke="#e8decb" stroke-width="1.2"/>
+                <path d="M12 24 C14 11 37 10 41 21 C39 31 22 37 12 24 Z" fill="#f4ebd9" opacity="0.9"/>
+                <path d="M17 27 C21 17 35 16 36 25 C34 31 23 34 17 27 Z" fill="#eedfc5" opacity="0.85"/>
+                <path d="M21 26 C23 21 31 20 31 25 C29 28 24 29 21 26 Z" fill="#dfcbab" opacity="0.8"/>
+              </g>
+
+              <!-- Center Main Blooming Rose -->
+              <g transform="translate(160, 20)">
+                <circle cx="30" cy="38" r="32" fill="#fffdf9" stroke="#e3d6be" stroke-width="1.2"/>
+                <path d="M12 25 C8 15 25 5 45 10 C56 14 58 26 52 35 C42 48 18 42 12 25 Z" fill="#f8f2e4" opacity="0.9"/>
+                <path d="M8 38 C4 26 18 16 32 18 C46 20 54 32 48 45 C38 56 16 52 8 38 Z" fill="#f5ede0" opacity="0.85"/>
+                <path d="M15 42 C12 32 24 24 38 25 C48 26 50 36 46 44 C40 52 24 50 15 42 Z" fill="#f0e4d0" opacity="0.85"/>
+                <path d="M20 36 C18 28 28 24 36 26 C42 28 42 36 38 40 C32 44 24 42 20 36 Z" fill="#ebd9bd" opacity="0.8"/>
+                <path d="M24 35 C23 30 30 28 34 29 C38 31 37 36 34 38 C30 40 26 39 24 35 Z" fill="#dfc6a2" opacity="0.85"/>
+                <circle cx="30" cy="34" r="3" fill="#cbb085" opacity="0.8"/>
+              </g>
+
+              <circle cx="170" cy="18" r="1.5" fill="#b9964c" opacity="0.6"/>
+              <circle cx="210" cy="18" r="1.5" fill="#b9964c" opacity="0.6"/>
+            </svg>
+          </div>
+
+          <h2 class="rsvp-title">RSVP</h2>
+          <p class="rsvp-script-sub script-accent">join us for the celebration</p>
+          
+          <div class="rsvp-intro-copy">
+            <p>We can't wait to share our special day with you!</p>
+            <p>Search your name below to let us know if you can make it.</p>
+            <p class="rsvp-deadline">Kindly RSVP by <strong>October 10, 2026</strong> so we can save your seat!</p>
+          </div>
+        </div>
+
+        <div class="rsvp-card-container">
+          <div class="rsvp-simple-box">
+            <!-- Search State -->
+            <div id="rsvpSearchContainer">
+              <div class="rsvp-step-head">
+                <h3>Find Your Invitation</h3>
+                <p>Type your name below to unlock your invitation.</p>
+              </div>
+
+              <div class="rsvp-field">
+                <label for="rsvpSearchInput">Your Name</label>
+                <input
+                  type="text"
+                  id="rsvpSearchInput"
+                  placeholder="Type your name (e.g. Alicia Santos)"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="rsvp-results-list" id="rsvpResultsList">
+                <p class="empty-state">Start typing your name to find your invitation.</p>
+              </div>
+            </div>
+
+            <!-- Attendance Selection Form (shown once name is selected) -->
+            <form id="rsvpSimpleForm" class="rsvp-simple-form" style="display: none;">
+              <div class="selected-guest-banner">
+                <div>
+                  <small>Selected Guest</small>
+                  <strong id="selectedGuestNameDisplay">Guest Name</strong>
+                </div>
+                <button type="button" class="link-btn" id="btnChangeSelectedGuest">Change</button>
+              </div>
+
+              <div class="rsvp-field">
+                <label class="field-label-bold">Will you celebrate with us?</label>
+                <div class="attendance-toggle-group">
+                  <label class="attendance-toggle-card">
+                    <input type="radio" name="simpleAttendance" value="Attending" required />
+                    <div class="toggle-card-content">
+                      <span class="toggle-icon">✨</span>
+                      <strong>Joyfully Joining</strong>
+                      <small>Can't wait to party!</small>
+                    </div>
+                  </label>
+
+                  <label class="attendance-toggle-card">
+                    <input type="radio" name="simpleAttendance" value="Not Attending" required />
+                    <div class="toggle-card-content">
+                      <span class="toggle-icon">💌</span>
+                      <strong>Sending Love</strong>
+                      <small>Celebrating from afar</small>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <button type="submit" class="button rsvp-submit-btn">
+                Send My RSVP &rarr;
+              </button>
+            </form>
+
+            <!-- Success Confirmation Screen -->
+            <div id="rsvpSuccessBox" class="rsvp-success-box" style="display: none;">
+              <div class="success-icon" aria-hidden="true">🥂</div>
+              <h3 id="successGuestName">Thank you!</h3>
+              <p class="success-status" id="successStatusMessage">
+                Your response: <strong>Attending</strong> has been recorded.
+              </p>
+              <p class="success-subnote">
+                We're so excited to celebrate together on <strong>October 24, 2026</strong>!
+              </p>
+              <button type="button" class="button button-outline-pill" id="btnResetSimpleRsvp" style="margin-top: 1.25rem;">
+                RSVP for Another Name
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wishes & Love Notes Guestbook Section (Disabled for now - uncomment to enable)
+      <section class="section section-wishes reveal" id="wishes">
+        <div class="section-heading">
+          <p class="eyebrow"><span class="script-accent">love notes &amp; advice</span> &bull; Guestbook</p>
+          <h2>Leave Us a Message</h2>
+          <p class="wishes-intro">
+            Tap the board or the button below to leave a sweet wish, marriage tip, or funny memory for our big day!
+          </p>
+        </div>
+
+        <div class="wishes-action-bar">
+          <button type="button" class="button button-gold-pill" id="btnOpenWishModal">
+            💌 Write a Note for John &amp; Jessa
+          </button>
+        </div>
+
+        <div class="wishes-board" id="wishesBoard">
+        </div>
+
+        <div class="wish-modal" id="wishModal" aria-hidden="true">
+          <div class="wish-modal-backdrop" id="wishModalBackdrop"></div>
+          <div class="wish-modal-dialog">
+            <button type="button" class="wish-modal-close" id="btnCloseWishModal" aria-label="Close modal">&times;</button>
+            <div class="wish-modal-head">
+              <span class="modal-icon" aria-hidden="true">💌</span>
+              <h3>Leave a Note</h3>
+              <p class="script-accent modal-sub">for John &amp; Jessa</p>
+            </div>
+
+            <form id="wishForm" class="wish-form">
+              <div class="rsvp-field">
+                <label for="wishAuthorName">Your Name</label>
+                <input
+                  type="text"
+                  id="wishAuthorName"
+                  placeholder="e.g. Aunt Maria, Chris & Sarah"
+                  required
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="rsvp-field">
+                <label for="wishMessageText">Your Message or Advice</label>
+                <textarea
+                  id="wishMessageText"
+                  rows="4"
+                  placeholder="Share a wish, marriage tip, or happy memory for the couple..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="wish-vibe-picker">
+                <label class="field-label-sm">Pick a vibe tag:</label>
+                <div class="vibe-tags-group">
+                  <label class="vibe-chip">
+                    <input type="radio" name="wishVibe" value="🥂 Cheering For You!" checked />
+                    <span>🥂 Cheering</span>
+                  </label>
+                  <label class="vibe-chip">
+                    <input type="radio" name="wishVibe" value="💖 Pure Love" />
+                    <span>💖 Pure Love</span>
+                  </label>
+                  <label class="vibe-chip">
+                    <input type="radio" name="wishVibe" value="✨ Forever & Always" />
+                    <span>✨ Forever</span>
+                  </label>
+                  <label class="vibe-chip">
+                    <input type="radio" name="wishVibe" value="💃 Ready to Dance" />
+                    <span>💃 Dancing</span>
+                  </label>
+                </div>
+              </div>
+
+              <button type="submit" class="button rsvp-submit-btn" style="margin-top: 1.25rem;">
+                Post Your Note ✨
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <section class="section section-closing reveal">
+        <div class="closing-content">
+          <p class="closing-script script-accent">See you in Dumaguete!</p>
+          <p class="closing-line">
+            Bring your biggest smiles, your happiest tears, and your best dance moves — we can't wait to celebrate with all of you!
+          </p>
+          <p class="closing-signoff">With all our love,<br /><strong class="closing-couple script-accent">John &amp; Jessa</strong></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./config.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
+

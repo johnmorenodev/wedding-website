@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prenup Gallery • John &amp; Jessa • 10.24.26</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Topbar Navigation -->
+    <header class="prenup-nav">
+      <a href="index.html" class="back-link">
+        &larr; Back to Wedding Details
+      </a>
+      <a class="brand" href="index.html">J<span class="script-amp">&amp;</span>J 10.24.26</a>
+      <div class="topbar-actions">
+        <a class="hero-rsvp-button" href="index.html#rsvp" style="min-height: 2.6rem; min-width: 6rem; font-size: 0.85rem;">RSVP</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="prenup-hero">
+        <p class="eyebrow"><span class="script-accent">captured moments &amp; memories</span> &bull; Our Story</p>
+        <h1>Our Prenup Gallery</h1>
+        <p class="hero-sub">
+          A glimpse into our journey and romance captured across Dumaguete City and beyond as we count down the days to forever.
+        </p>
+        <div class="photo-count-pill" id="photoCountPill" style="display: none;">
+          <span>✨</span>
+          <span id="photoCountNumber">0 Photographs</span>
+        </div>
+      </section>
+
+      <!-- Masonry Gallery -->
+      <section class="gallery-container">
+        <div class="gallery-masonry" id="prenupGrid">
+          <!-- Dynamically populated via CloudFront CDN / Next.js API -->
+        </div>
+      </section>
+
+      <!-- Lightbox Modal -->
+      <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog" aria-label="Photo Lightbox">
+        <button type="button" class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close photo viewer">&times;</button>
+        <button type="button" class="lightbox-prev-btn" id="lightboxPrevBtn" aria-label="Previous photo">&#10094;</button>
+        <button type="button" class="lightbox-next-btn" id="lightboxNextBtn" aria-label="Next photo">&#10095;</button>
+        
+        <div class="lightbox-content">
+          <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+          <div class="lightbox-bar">
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+            <span class="lightbox-counter" id="lightboxCounter">1 / 1</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing Footer Signoff -->
+      <section class="section section-closing" style="margin-top: 3rem;">
+        <div class="closing-content">
+          <p class="closing-script script-accent">See you on October 24, 2026!</p>
+          <p class="closing-line">
+            We can't wait to create a lifetime of new memories with all of you in Dumaguete.
+          </p>
+          <p class="closing-signoff">With all our love,<br /><strong class="closing-couple script-accent">John &amp; Jessa</strong></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-copy">&copy; 2026 John &amp; Jessa. Handcrafted with love.</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="prenup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf4e3" />
+      <stop offset="50%" stop-color="#dfc37a" />
+      <stop offset="100%" stop-color="#b8974d" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a3828" />
+      <stop offset="100%" stop-color="#141d15" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="32" cy="32" r="31" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="1.8" />
+  <circle cx="32" cy="32" r="27.5" fill="none" stroke="#dfc37a" stroke-width="0.75" stroke-dasharray="2.5 1.5" opacity="0.65" />
+
+  <!-- Monogram J & J -->
+  <!-- Left J -->
+  <text
+    x="18.5"
+    y="40.5"
+    font-family="'Cormorant Garamond', 'Georgia', serif"
+    font-size="23"
+    font-weight="600"
+    fill="#fffdf8"
+    text-anchor="middle"
+    letter-spacing="-0.02em"
+  >J</text>
+
+  <!-- Center Ampersand & -->
+  <text
+    x="32"
+    y="39"
+    font-family="'Alex Brush', 'Brush Script MT', 'Baskerville', cursive"
+    font-size="18"
+    font-style="italic"
+    fill="url(#goldGrad)"
+    text-anchor="middle"
+  >&amp;</text>
+
+  <!-- Right J -->
+  <text
+    x="45.5"
+    y="40.5"
+    font-family="'Cormorant Garamond', 'Georgia', serif"
+    font-size="23"
+    font-weight="600"
+    fill="#fffdf8"
+    text-anchor="middle"
+    letter-spacing="-0.02em"
+  >J</text>
+</svg>

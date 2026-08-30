@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photographer Portal • Prenup Uploads • John &amp; Jessa</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="uploader-page">
+    <div class="uploader-card">
+      <div class="uploader-head">
+        <p class="eyebrow" style="color: var(--gold);"><span class="script-accent" style="font-size: 1.4rem;">photographer portal</span> &bull; John &amp; Jessa</p>
+        <h1>Prenup Photo Uploader</h1>
+        <p>
+          Welcome! Drag and drop high-resolution prenup photographs below to upload directly to our wedding gallery CDN.
+        </p>
+      </div>
+
+      <!-- Token Authorization Gate (if not passed in URL) -->
+      <div id="tokenGateBox" style="display: none; background: rgba(0,0,0,0.3); border: 1px solid rgba(223,195,122,0.3); padding: 2rem; border-radius: 12px; text-align: center; margin-bottom: 2rem;">
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--gold); margin-bottom: 0.5rem;">Enter Upload Passcode</h3>
+        <p style="color: #c4d1cb; font-size: 0.88rem; margin-bottom: 1.25rem;">Please enter the private upload passcode given by the couple.</p>
+        <div style="display: flex; gap: 0.75rem; max-width: 24rem; margin: 0 auto;">
+          <input
+            type="password"
+            id="tokenInput"
+            placeholder="e.g. prenup2026"
+            style="flex: 1; padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(223,195,122,0.4); background: rgba(255,255,255,0.08); color: #fff; font-size: 0.95rem;"
+          />
+          <button
+            type="button"
+            id="btnSubmitToken"
+            class="button"
+            style="padding: 0.8rem 1.25rem; background: var(--gold); color: #12261e; font-weight: 700; border: none; border-radius: 8px; cursor: pointer;"
+          >
+            Unlock &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Uploader App (Shown when token is valid) -->
+      <div id="uploaderApp" style="display: none;">
+        <!-- Drag & Drop Zone -->
+        <div class="uploader-dropzone" id="dropzone">
+          <span class="dropzone-icon">📸</span>
+          <strong>Drag &amp; drop photos here</strong>
+          <span>or click to browse files from your computer (JPG, PNG, WebP)</span>
+          <input type="file" id="fileInput" class="uploader-file-input" multiple accept="image/jpeg,image/png,image/webp,image/avif" />
+        </div>
+
+        <!-- Selected Files Queue -->
+        <div class="uploader-queue" id="uploaderQueue" style="display: none;">
+          <div class="uploader-queue-header">
+            <strong style="font-family: 'Cinzel', serif; font-size: 0.95rem; letter-spacing: 0.08em; color: var(--gold);">
+              Selected Photos (<span id="queueCount">0</span>)
+            </strong>
+            <button
+              type="button"
+              id="btnClearQueue"
+              style="background: none; border: none; color: #a8b8b0; font-size: 0.82rem; cursor: pointer; text-decoration: underline;"
+            >
+              Clear All
+            </button>
+          </div>
+
+          <div id="fileListContainer">
+            <!-- Dynamically populated file items -->
+          </div>
+
+          <button type="button" class="btn-upload-action" id="btnStartUpload">
+            Upload Photos to Gallery ✨
+          </button>
+        </div>
+
+        <!-- Completion Box -->
+        <div id="uploadSuccessBanner" style="display: none; margin-top: 2rem; background: rgba(46, 125, 50, 0.25); border: 1px solid #81c784; padding: 1.5rem; border-radius: 12px; text-align: center;">
+          <h3 style="color: #a5d6a7; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin: 0 0 0.4rem;">
+            All Photos Uploaded Successfully! ✨
+          </h3>
+          <p style="color: #e8f5e9; font-size: 0.92rem; margin-bottom: 1.25rem;">
+            The photographs are now live on the prenup gallery page with CDN caching enabled.
+          </p>
+          <a
+            href="prenup.html"
+            target="_blank"
+            class="button"
+            style="display: inline-block; padding: 0.75rem 1.5rem; background: var(--gold); color: #12261e; font-weight: 700; text-decoration: none; border-radius: 8px;"
+          >
+            View Live Prenup Gallery &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="upload.js"></script>
+  </body>
+</html>
